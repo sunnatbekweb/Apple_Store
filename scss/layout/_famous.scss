@@ -1,0 +1,174 @@
+#famous {
+    padding: 32px 0 40px 0;
+    margin-bottom: 98px;
+
+    h1 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: #0071E4;
+    }
+
+    .f_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 12px;
+        row-gap: 24px;
+        justify-content: center;
+
+        .f_card {
+            width: 300px;
+            height: 611px;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 16px;
+            padding: 16px 16px 24px 16px;
+
+
+            .c_header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .raiting {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    p {
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #0071E4;
+                    }
+                }
+
+                .icons1 {
+                    display: flex;
+                    gap: 8px;
+                }
+            }
+
+            h2 {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 29px;
+                text-align: center;
+                color: #100E0E;
+                margin-bottom: 9px;
+            }
+
+            .cs_1 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 16px 0 4px 0;
+
+                .have {
+                    display: flex;
+                    align-items: center;
+
+                }
+
+                .have_t {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #706E6E;
+                }
+            }
+
+            .price {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .old_p {
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 24px;
+                    text-decoration-line: line-through;
+                    color: #878787;
+                }
+
+                .no {
+                    margin-top: 4px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #878787;
+                }
+
+                h3 {
+                    font-weight: 500;
+                    font-size: 32px;
+                    line-height: 38px;
+                    color: #100E0E;
+                }
+            }
+
+            .exist {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                width: 100%;
+                padding: 16px;
+                border: none;
+                background: #0071E4;
+                border-radius: 8px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
+                color: #FFFFFF;
+                margin: 32px 0 25px 0;
+                cursor: pointer;
+
+                &:hover {
+                    background: #2A93FD;
+                }
+
+                &:focus {
+                    background: #6FD91C;
+                }
+            }
+
+            .btn_no {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                border: 1px solid #0071E4 !important;
+                border-radius: 8px;
+                margin: 32px 0 25px 0;
+                padding: 16px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 21px;
+                color: #0071E4;
+                cursor: pointer;
+            }
+
+            .c_footer {
+                display: flex;
+                justify-content: space-between;
+
+                .next {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #0071E4;
+                    text-decoration: none;
+                }
+
+                .buy {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #706E6E;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

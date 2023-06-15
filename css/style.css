@@ -473,7 +473,7 @@ header .header_s3 .h_s3 .btn1 i {
   font-size: 24px;
 }
 header .header_s3 .h_s3 .btn1:hover {
-  background: #9747FF;
+  background: #5035F7;
 }
 header .header_s3 .h_s3 .btn1:focus {
   background: #9747FF;
@@ -620,9 +620,180 @@ header .header_s4 .iphone14 h1 {
   line-height: 19px;
   color: #FFFFFF;
   border: transparent;
+  cursor: pointer;
+}
+#intro .intro_div .iphone14_pro .text button:hover {
+  background: #2A93FD;
 }
 
 footer {
   width: 100%;
   height: auto;
+}
+
+#famous {
+  padding: 32px 0 40px 0;
+  margin-bottom: 98px;
+}
+#famous h1 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #0071E4;
+}
+#famous .f_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 12px;
+  row-gap: 24px;
+  justify-content: center;
+}
+#famous .f_wrapper .f_card {
+  width: 300px;
+  height: 611px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  padding: 16px 16px 24px 16px;
+}
+#famous .f_wrapper .f_card .c_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#famous .f_wrapper .f_card .c_header .raiting {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#famous .f_wrapper .f_card .c_header .raiting p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #0071E4;
+}
+#famous .f_wrapper .f_card .c_header .icons1 {
+  display: flex;
+  gap: 8px;
+}
+#famous .f_wrapper .f_card h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #100E0E;
+  margin-bottom: 9px;
+}
+#famous .f_wrapper .f_card .cs_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0 4px 0;
+}
+#famous .f_wrapper .f_card .cs_1 .have {
+  display: flex;
+  align-items: center;
+}
+#famous .f_wrapper .f_card .cs_1 .have_t {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #706E6E;
+}
+#famous .f_wrapper .f_card .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#famous .f_wrapper .f_card .price .old_p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration-line: line-through;
+  color: #878787;
+}
+#famous .f_wrapper .f_card .price .no {
+  margin-top: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #878787;
+}
+#famous .f_wrapper .f_card .price h3 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  color: #100E0E;
+}
+#famous .f_wrapper .f_card .exist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  background: #0071E4;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  margin: 32px 0 25px 0;
+  cursor: pointer;
+}
+#famous .f_wrapper .f_card .exist:hover {
+  background: #2A93FD;
+}
+#famous .f_wrapper .f_card .exist:focus {
+  background: #6FD91C;
+}
+#famous .f_wrapper .f_card .btn_no {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #0071E4 !important;
+  border-radius: 8px;
+  margin: 32px 0 25px 0;
+  padding: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #0071E4;
+  cursor: pointer;
+}
+#famous .f_wrapper .f_card .c_footer {
+  display: flex;
+  justify-content: space-between;
+}
+#famous .f_wrapper .f_card .c_footer .next {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #0071E4;
+  text-decoration: none;
+}
+#famous .f_wrapper .f_card .c_footer .buy {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #706E6E;
+  text-decoration: none;
+}
+
+#info {
+  padding: 32px 0;
+}
+#info h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: #100E0E;
+}
+#info p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #585656;
 }/*# sourceMappingURL=style.css.map */
