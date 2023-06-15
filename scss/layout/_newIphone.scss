@@ -1,0 +1,49 @@
+#newIphone {
+    width: 100%;
+    height: 360px;
+    background: #000000;
+
+    .np {
+        display: flex;
+        align-items: center;
+        gap: 88px;
+
+        &_text {
+            h1 {
+                font-weight: 700;
+                font-size: 56px;
+                line-height: 67px;
+                color: #FFFFFF;
+                margin: 0;
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 29px;
+                color: #FFFFFF;
+                margin: 16px 0 24px 0;
+            }
+
+            button {
+                padding: 18px 39px;
+                border: none;
+                background: #0071E4;
+                border-radius: 8px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                color: #FFFFFF;
+                cursor: pointer;
+
+                &:hover {
+                    background: #2A93FD;
+                }
+
+                &:active {
+                    background: #E7E7E7;
+                }
+            }
+        }
+    }
+}
