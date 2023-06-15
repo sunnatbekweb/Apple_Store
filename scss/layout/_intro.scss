@@ -1,0 +1,58 @@
+#main {
+    margin-top: 335px;
+}
+
+#intro {
+    margin-top: 335px;
+    width: 100%;
+    height: 480px;
+    background: #D0EAFC;
+    display: flex;
+    align-items: center;
+
+    .intro_div {
+        display: flex;
+
+        .arrow {
+            cursor: pointer;
+        }
+
+        .iphone14_pro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+            margin-top: 99px;
+            margin: 99px 157px 0 108px;
+
+            .text {    
+
+                p {
+                    font-weight: 400;
+                    font-size: 32px;
+                    line-height: 38px;
+                    color: #1E3240;
+                    margin: 18px 0 19px 0;
+
+                    span {
+                        font-weight: 400;
+                        font-size: 48px;
+                        line-height: 57px;
+                        color: #1E3240;
+                    }
+                }
+
+                button {
+                    padding: 18px 39px 18px 39px;
+                    background: #0071E4;
+                    border-radius: 8px;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #FFFFFF;
+                    border: transparent;
+                }
+            }
+        }
+    }
+}

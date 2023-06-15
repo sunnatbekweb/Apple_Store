@@ -1,0 +1,13 @@
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
