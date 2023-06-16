@@ -644,7 +644,6 @@ footer {
 
 #famous {
   padding: 32px 0 40px 0;
-  margin-bottom: 98px;
 }
 #famous h1 {
   font-weight: 500;
@@ -1004,4 +1003,70 @@ footer {
   line-height: 19px;
   color: #706E6E;
   text-decoration: none;
+}
+
+#advantage {
+  padding: 40px 0;
+}
+#advantage h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: #100E0E;
+  text-align: center;
+  margin: 0 0 24px 0;
+}
+#advantage .a_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+#advantage .a_wrapper .a_card {
+  padding: 24px 8px 32px 8px;
+  width: 228px;
+  height: 500px;
+  background: linear-gradient(180.04deg, #FE94A6 0.04%, #F2F2F2 65.84%);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#advantage .a_wrapper .a_card h2 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 29px;
+  text-align: center;
+  color: #100E0E;
+  margin: 16px 0 8px 0;
+  height: 58px;
+}
+#advantage .a_wrapper .a_card p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #585656;
+  height: 114px;
+  margin-bottom: 24px;
+}
+#advantage .a_wrapper .a_card button {
+  width: 212px;
+  padding: 17px 0;
+  border: 1px solid #0071E4;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #0071E4;
+}
+#advantage .a_wrapper .a_card:nth-child(2) {
+  background: linear-gradient(180.04deg, #E685FF 0.04%, #F2F2F2 65.84%);
+}
+#advantage .a_wrapper .a_card:nth-child(3) {
+  background: linear-gradient(180.04deg, #7DE9FF 0.04%, #F2F2F2 65.84%);
+}
+#advantage .a_wrapper .a_card:nth-child(4) {
+  background: linear-gradient(180.04deg, #FFE685 0.04%, #F7F7F7 65.84%);
+}
+#advantage .a_wrapper .a_card:nth-child(5) {
+  background: linear-gradient(180.04deg, #ADFFC1 0.04%, #F2F2F2 65.84%), #F2F2F2;
 }/*# sourceMappingURL=style.css.map */
