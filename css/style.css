@@ -640,6 +640,92 @@ header .header_s4 .iphone14 h1 {
 footer {
   width: 100%;
   height: auto;
+  padding: 30px 0 40px 0;
+}
+footer .f_all {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .f_all .ftr_card1 {
+  width: 273px;
+}
+footer .f_all .ftr_card1 .ftr_text1 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 27px 0 24px 0;
+}
+footer .f_all .ftr_card1 .ftr_text1 p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #878787;
+}
+footer .f_all .ftr_card1 .a_s {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  color: #B7B7B7;
+}
+footer .f_all .list1,
+footer .f_all .list2 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style-type: none;
+}
+footer .f_all .list1 a,
+footer .f_all .list2 a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #100E0E;
+}
+footer .f_all .last_section {
+  width: 313px;
+  margin-left: 55px;
+}
+footer .f_all .last_section h1 {
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 48px;
+  color: #100E0E;
+  margin: 0;
+}
+footer .f_all .last_section p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #706E6E;
+  margin: 4px 0 7px 0;
+}
+footer .f_all .last_section .call_social {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+footer .f_all .last_section .call_social a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #0071E4;
+}
+footer .f_all .last_section .call_social ul {
+  list-style-type: none;
+  display: flex;
+  gap: 8px;
+}
+footer .f_all .last_section .call_social ul img:hover {
+  transform: scale(110%) !important;
+}
+footer .f_all .last_section .location {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 #famous {
@@ -1057,6 +1143,14 @@ footer {
   font-size: 18px;
   line-height: 21px;
   color: #0071E4;
+  cursor: pointer;
+}
+#advantage .a_wrapper .a_card button:hover {
+  background: #2A93FD;
+  color: #FFFFFF;
+}
+#advantage .a_wrapper .a_card button:active {
+  background: #0071E4;
 }
 #advantage .a_wrapper .a_card:nth-child(2) {
   background: linear-gradient(180.04deg, #E685FF 0.04%, #F2F2F2 65.84%);
@@ -1069,4 +1163,82 @@ footer {
 }
 #advantage .a_wrapper .a_card:nth-child(5) {
   background: linear-gradient(180.04deg, #ADFFC1 0.04%, #F2F2F2 65.84%), #F2F2F2;
+}
+
+#subscribe {
+  padding: 40px 0 40px 0;
+  background: #F9F9F9;
+}
+#subscribe .sub_all {
+  display: flex;
+  align-items: center;
+  gap: 86px;
+}
+#subscribe .sub_all .sub_card {
+  width: 486px;
+}
+#subscribe .sub_all .sub_card h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+  color: #100E0E;
+}
+#subscribe .sub_all .sub_card .sub_text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: #585656;
+  margin: 8px 0 25px;
+}
+#subscribe .sub_all .sub_card .sub_send {
+  width: 516px;
+  height: 196px;
+  background: linear-gradient(90.34deg, #F7355D 0.3%, #9747FF 101.33%);
+  border-radius: 16px;
+  padding: 16px 32px;
+}
+#subscribe .sub_all .sub_card .sub_send h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FFFFFF;
+}
+#subscribe .sub_all .sub_card .sub_send p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin: 4px 0 16px 0;
+}
+#subscribe .sub_all .sub_card .sub_send .sub_input {
+  display: flex;
+  justify-content: space-between;
+}
+#subscribe .sub_all .sub_card .sub_send .sub_input input {
+  width: 246px;
+  height: 56px;
+  background: #FFFFFF;
+  border: 1px solid #DBDBDB;
+  border-radius: 8px;
+  padding-left: 24px;
+}
+#subscribe .sub_all .sub_card .sub_send .sub_input button {
+  padding: 18px 33px;
+  background: #E7E7E7;
+  border-radius: 8px;
+  border: transparent;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #585656;
+  cursor: pointer;
+}
+#subscribe .sub_all .sub_card .sub_send .sub_input button:hover {
+  background-color: #FFFFFF;
+  border: 1px solid #0071E4;
+  color: #0071E4;
+}
+#subscribe .sub_all .sub_card .sub_send .sub_input button:active {
+  background: #0071E4;
+  color: #FFFFFF;
 }/*# sourceMappingURL=style.css.map */

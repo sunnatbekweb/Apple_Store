@@ -54,6 +54,16 @@
                 font-size: 18px;
                 line-height: 21px;
                 color: #0071E4;
+                cursor: pointer;
+
+                &:hover {
+                    background: #2A93FD;
+                    color: #FFFFFF;
+                }
+
+                &:active {
+                    background: #0071E4;
+                }
             }
         }
 

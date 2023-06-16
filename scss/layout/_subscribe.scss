@@ -1,0 +1,89 @@
+#subscribe {
+    padding: 40px 0 40px 0;
+    background: #F9F9F9;
+
+    .sub_all {
+        display: flex;
+        align-items: center;
+        gap: 86px;
+
+        .sub_card {
+            width: 486px;
+
+            h2 {
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 57px;
+                color: #100E0E;
+            }
+
+            .sub_text {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 29px;
+                color: #585656;
+                margin: 8px 0 25px;
+            }
+
+            .sub_send {
+                width: 516px;
+                height: 196px;
+                background: linear-gradient(90.34deg, #F7355D 0.3%, #9747FF 101.33%);
+                border-radius: 16px;
+                padding: 16px 32px;
+
+                h3 {
+                    font-weight: 700;
+                    font-size: 40px;
+                    line-height: 48px;
+                    color: #FFFFFF;
+                }
+
+                p {
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: #FFFFFF;
+                    margin: 4px 0 16px 0;
+                }
+
+                .sub_input {
+                    display: flex;
+                    justify-content: space-between;
+
+                    input {
+                        width: 246px;
+                        height: 56px;
+                        background: #FFFFFF;
+                        border: 1px solid #DBDBDB;
+                        border-radius: 8px;
+                        padding-left: 24px;
+                    }
+
+                    button {
+                        padding: 18px 33px;
+                        background: #E7E7E7;
+                        border-radius: 8px;
+                        border: transparent;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #585656;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: #FFFFFF;
+                            border: 1px solid #0071E4;
+                            color: #0071E4;
+                        }
+
+                        &:active {
+                            background: #0071E4;
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
