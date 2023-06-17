@@ -327,7 +327,8 @@
 
         .col4 {
           margin-top: 16px;
-          display: block;
+          display: flex;
+          justify-content: space-between;
 
           .imgs {
             margin-left: -65px;
@@ -346,14 +347,10 @@
             margin-bottom: 5px;
           }
 
-          div {
-            margin-left: 66px;
-
-            .order {
-              left: 0px;
-              top: 620px;
-              position: absolute;
-            }
+          .social {
+            display: flex;
+            justify-content: space-between;
+            
           }
 
           .loc {
