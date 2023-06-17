@@ -319,7 +319,6 @@ template {
 
 body {
   font-family: "Montserrat", sans-serif;
-  overflow: hidden;
 }
 
 .container {
@@ -2690,6 +2689,7 @@ header .nav__wrapper--products-con img {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   }
   #subscribe .sub_all {
     margin-left: 200px;
