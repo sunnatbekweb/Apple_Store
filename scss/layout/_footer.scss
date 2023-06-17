@@ -231,6 +231,20 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          
+          path {
+            fill: #585656;
+          }
+
+          &:hover {
+            p {
+              color: #0071e4;
+            }
+
+            path {
+              fill: #0071e4;
+            }
+          }
         }
       }
     }

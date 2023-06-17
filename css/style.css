@@ -1051,6 +1051,15 @@ header .nav__wrapper--products-con img {
     align-items: center;
     justify-content: center;
   }
+  #footer .footer_bottom .container div path {
+    fill: #585656;
+  }
+  #footer .footer_bottom .container div:hover p {
+    color: #0071e4;
+  }
+  #footer .footer_bottom .container div:hover path {
+    fill: #0071e4;
+  }
 }
 @media only screen and (max-width: 480px) {
   #footer .footer_top {
