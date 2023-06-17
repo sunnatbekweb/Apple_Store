@@ -171,5 +171,150 @@
                 }
             }
         }
+
+    }
+
+    .tablet_wrapper_card {
+        display: none;
+        flex-wrap: wrap;
+        gap: 40px;
+
+        .f_card_new {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 280px;
+            height: 390px;
+            padding: 16px;
+
+            .c_header_new {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 16px;
+
+                .raiting {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+
+                .icons1 {
+                    display: flex;
+                    gap: 8px;
+                }
+
+            }
+
+            .iphone_tablet {
+                width: 140px;
+                height: 152px;
+            }
+
+            h2 {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 21px;
+                text-align: center;
+                color: #100E0E;
+                margin: 8px 0 12px 0;
+            }
+
+            .cs_1 {
+                display: flex;
+                justify-content: space-between;
+
+                .have_t {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #706E6E;
+                }
+
+                .have {
+                    display: flex;
+                    gap: 4px;
+                    align-items: center;
+                }
+            }
+
+            .price {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 8px 0 12px 0;
+
+                .old_p {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+                    text-decoration-line: line-through;
+                    color: #878787;
+                    margin-right: 4px;
+                }
+
+                .priceButton {
+                    display: flex;
+                    gap: 8px;
+                    padding: 8px 9px;
+                    background-color: #2A93FD;
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: #FFFFFF;
+                    cursor: pointer;
+                    border-radius: 8px;
+
+                    &:hover {
+                        background: $dark-blue;
+                    }
+
+                    &:focus {
+                        background: #6FD91C;
+                    }
+                }
+
+            }
+
+            .c_footer {
+                display: flex;
+                justify-content: space-between;
+
+                .next {
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #0071E4;
+                    margin-right: 31px;
+                }
+
+                .buy {
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 17px;
+                    text-align: right;
+                    color: #706E6E;
+                }
+            }
+        }
     }
 }
+
+@media only screen and (max-width: 1080px) {
+    #famous {
+        padding: 24px 0 24px 0;
+
+        .f_wrapper {
+            display: none;
+        }
+
+        .tablet_wrapper_card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}       
