@@ -319,6 +319,7 @@ template {
 
 body {
   font-family: "Montserrat", sans-serif;
+  overflow: hidden;
 }
 
 .container {
@@ -2715,6 +2716,7 @@ header .nav__wrapper--products-con img {
     line-height: 19px;
   }
   #subscribe .sub_all .sub_card .sub_send {
+    max-width: 100% !important;
     position: relative;
     left: -35px;
   }
