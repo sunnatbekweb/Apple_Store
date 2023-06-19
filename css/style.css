@@ -605,10 +605,13 @@ header .nav__wrapper--products-con img {
     justify-content: space-between;
   }
   header .nav__wrapper {
-    width: 768px;
+    max-width: 768px;
   }
   header .nav__wrapper--tb {
     display: flex;
+  }
+  header .nav__wrapper--tb-left input {
+    max-width: 400px;
   }
   header .nav__wrapper--tb-right .nav__wrapper--tb-right-sss {
     display: none;
@@ -2632,6 +2635,9 @@ header .nav__wrapper--products-con img {
 }
 
 @media only screen and (max-width: 1080px) {
+  #subscribe {
+    overflow: hidden;
+  }
   #subscribe .sub_all img {
     width: 224px;
     height: 173px;
