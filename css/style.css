@@ -482,6 +482,10 @@ header .nav__wrapper--down1 .div2 {
   border: none;
   cursor: pointer;
 }
+header .nav__wrapper--down1 .div2 i {
+  color: #ffffff;
+  font-size: 24px;
+}
 header .nav__wrapper--down1 .div2:hover {
   background: #2A93FD;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
