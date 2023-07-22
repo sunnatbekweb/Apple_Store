@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    max-width: 1280px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.categories:hover {
+    span {
+        color: #0071E4;
+    }
+
+    path {
+        stroke: #0071E4;
+        fill: none;
+    }
+}
+
+.new_phone {
+    border-radius: 8px;
+    background: linear-gradient(90deg, #000 0%, #5E556B 100%);
+}
+
+.card:nth-child(1) {
+    background: linear-gradient(180deg, #FE94A6 0%, #F2F2F2 100%);
+}
+
+.card:nth-child(2) {
+    background: linear-gradient(180deg, #E685FF 0%, #F2F2F2 100%);
+}
+
+.card:nth-child(3) {
+    background: linear-gradient(180deg, #7DE9FF 0%, #F2F2F2 100%);
+}
+
+.card:nth-child(4) {
+    background: linear-gradient(180deg, #FFE685 0%, #F6F6F6 100%);
+}
+
+.card:nth-child(5) {
+    background: linear-gradient(180deg, #ADFFC1 0%, #F2F2F2 100%), #F2F2F2;
+}
+
+.sub_card {
+    padding: 16px 32px 32px 32px;
+    border-radius: 16px;
+    background: linear-gradient(96deg, #F7355D 0%, #9747FF 100%);
+}
