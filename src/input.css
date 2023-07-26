@@ -42,6 +42,10 @@
     background: linear-gradient(180deg, #7DE9FF 0%, #F2F2F2 100%);
 }
 
+.card:nth-child(3) p {
+    height: 85px;
+}
+
 .card:nth-child(4) {
     background: linear-gradient(180deg, #FFE685 0%, #F6F6F6 100%);
 }
@@ -51,7 +55,16 @@
 }
 
 .sub_card {
-    padding: 16px 32px 32px 32px;
     border-radius: 16px;
     background: linear-gradient(96deg, #F7355D 0%, #9747FF 100%);
+}
+
+.categories:hover {
+    svg path {
+        fill: #0071E4 !important;
+    }
+
+    span {
+        color: #0071E4;
+    }
 }

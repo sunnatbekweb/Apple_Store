@@ -14,7 +14,7 @@
     <!-- Box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- main css -->
-    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="../dist/output.css">
     <link rel="stylesheet" href="./input.css">
     <!-- Title -->
     <title>Apple Store</title>
@@ -25,20 +25,24 @@
     <header class="fixed top-0 w-full bg-white">
         <div class="container mx-auto px-5">
             <nav class="py-6 flex flex-col gap-[30px]">
-                <div class="flex justify-between">
-                    <button
-                        class="flex items-center gap-1 p-4 bg-[#0071E4] rounded-2xl text-white text-xl hover:bg-[#5035F7] focus:bg-[#9747FF]">
-                        <i class='bx bx-dots-vertical-rounded text-2xl'></i>
-                        Каталог товаров
-                    </button>
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-8">
+                        <img src="./assets/icons/logo.svg" alt="Apple logo" class="flex lg:hidden">
+                        <button
+                            class="items-center gap-1 p-4 bg-[#0071E4] rounded-2xl text-white text-xl hover:bg-[#5035F7] focus:bg-[#9747FF] hidden lg:flex">
+                            <i class='bx bx-dots-vertical-rounded text-2xl'></i>
+                            Каталог товаров
+                        </button>
 
-                    <div class="flex items-center gap-2 px-6 py-4 border border-[#B7B7B7] w-[595px] rounded-lg">
-                        <img src="./assets/icons/akar-icons_search.svg" alt="Search icon">
-                        <input type="search" placeholder="Поиск по каталогу товаров"
-                            class="focus:outline-none placeholder:text-lg w-full">
+                        <div
+                            class="flex items-center p-0 gap-2 md:px-6 md:py-4 border-transparent w-[250px] border md:border-[#B7B7B7] md:w-[595px] rounded-lg">
+                            <img src="./assets/icons/akar-icons_search.svg" alt="Search icon">
+                            <input type="search" placeholder="Поиск..."
+                                class="focus:outline-none placeholder:text-lg w-full max-w-[600px]">
+                        </div>
                     </div>
 
-                    <div class="flex items-center gap-6">
+                    <div class="items-center gap-6 hidden md:flex">
                         <img src="./assets/icons/icon-park-outline_like.svg" alt="Like icon"
                             class="cursor-pointer hover:scale-110">
                         <img src="./assets/icons/gg_filters.svg" alt="gg_filters icon"
@@ -46,13 +50,18 @@
                     </div>
 
                     <button
-                        class="flex items-center gap-3 px-4 rounded-2xl bg-[#F6F6F6] text-xl text-[#100E0E] hover:shadow-2xl duration-200 shadow-[#F6F6F6]">
+                        class="items-center gap-3 px-4 rounded-2xl bg-[#F6F6F6] text-xl text-[#100E0E] hover:shadow-2xl duration-200 shadow-[#F6F6F6] hidden xl:flex">
                         <img src="./assets/icons/ri_shopping-bag-3-fill.svg" alt="shopping bag">
                         в корзине пусто
                     </button>
+
+                    <img src="./assets/icons/ri_shopping-bag-3-fill.svg" alt="shopping bag"
+                        class="hidden lg:flex xl:hidden w-10 h-10 cursor-pointer hover:scale-105">
+
+                    <i class='bx bx-menu text-4xl hover:scale-105 cursor-pointer' style='color:#000000'></i>
                 </div>
 
-                <div class="flex justify-between">
+                <div class="justify-center gap-10 items-center hidden xl:flex">
                     <div class="flex items-center justify-between gap-6">
                         <div class="categories flex items-center gap-2 cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
@@ -115,9 +124,14 @@
                             </svg>
                             <span>Аксессуары</span>
                         </div>
+
+                        <div class="categories flex items-center gap-2 cursor-pointer">
+                            <i class='bx bx-category text-5xl text-[#CCCCCC]'></i>
+                            <span>Другие</span>
+                        </div>
                     </div>
 
-                    <div class="new_phone flex items-center gap-[11px] pl-[5px] pr-4">
+                    <!-- <div class="new_phone flex items-center gap-[11px] pl-[5px] pr-4">
                         <img src="./assets/images/design_startframe.png" alt="phone design image ">
 
                         <p class="text-white text-xl">iPhone 14 Pro Max</p>
@@ -134,14 +148,14 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                    </div>
+                    </div> -->
                 </div>
             </nav>
         </div>
     </header>
 
-    <main class="mt-[205px]">
-        <div class="container mx-auto px-5">
+    <main class="mt-[88px] md:mt-[112px] xl:mt-[205px]">
+        <div class="container mx-auto px-5 hidden xl:block">
             <div class="flex justify-between items-center">
                 <a href="./index.html"><img src="./assets/icons/logo.svg" alt="Logo"></a>
 
@@ -179,20 +193,24 @@
             <div class="container mx-auto px-5">
                 <div class="flex gap-12 pt-[100px] items-center justify-center">
                     <i class='bx bx-chevron-left text-5xl cursor-pointer mb-[100px]' style='color:#100E0E'></i>
-                    <img src="./assets/images/banner_iphone.png" alt="Iphone image">
+                    <img src="./assets/images/banner_iphone.png" alt="Iphone image" class="hidden lg:flex">
 
-                    <div class="">
-                        <img src="./assets/icons/banner_heading.svg" alt="banner heading">
+                    <div class="flex flex-col items-center lg:items-start">
+                        <img src="./assets/icons/banner_heading.svg" alt="banner heading"
+                            class="w-[310px] h-[56px] lg:w-[457px] lg:h-[105px]">
 
                         <div class="flex gap-4 items-start my-5">
-                            <span class="text-[32px] text-[#1E3240]">от</span>
-                            <h3 class="text-5xl text-[#1E3240]">137 900 ₽</h3>
+                            <span class="text-xl md:text-[26px] text-[#1E3240]">от</span>
+                            <h3 class="text-2xl md:text-3xl text-[#1E3240]">137 900 ₽</h3>
                         </div>
 
                         <button
                             class="w-[160px] h-[56px] flex items-center justify-center text-white text-base font-medium bg-[#0071E4] hover:bg-[#2A93FD] active:bg-[#0071E4] rounded-lg">
                             подробнее
                         </button>
+
+                        <img src="./assets/images/intro_iphone_md.jpg" alt="Iphone image"
+                            class="flex lg:hidden mt-8 bg-transparent">
                     </div>
                     <i class='bx bx-chevron-right text-5xl cursor-pointer mb-[100px]' style='color:#100E0E'></i>
                 </div>
@@ -200,14 +218,15 @@
         </section>
 
         <div class="container mx-auto px-5">
-            <h1 class="text-5xl text-[#100E0E] font-medium text-center py-6">купить iPhone в Ташкенте</h1>
+            <h1 class="text-2xl md:text-[40px] lg:text-5xl text-[#100E0E] font-medium text-center py-6">купить iPhone в
+                Ташкенте</h1>
         </div>
 
         <section id="popular" class="py-10">
             <div class="container mx-auto px-5">
-                <p class="text-[#0071E4] text-2xl font-medium mb-6">Самое популярное</p>
+                <p class="text-base text-[#0071E4] md:text-2xl font-medium mb-6">Самое популярное</p>
 
-                <div class="wrapper flex flex-wrap gap-6">
+                <div class="xl_wrapper lg:flex flex-wrap justify-center gap-6 hidden">
                     <div class="w-[300px] px-2 py-4 shadow-lg border hover:shadow-2xl duration-200 rounded-2xl">
                         <div class="flex items-center justify-between">
                             <div class="text-2xl flex items-center">
@@ -269,12 +288,51 @@
                         </button>
                     </div>
                 </div>
+
+                <div class="md_wrapper lg:hidden flex flex-wrap justify-center gap-10">
+                    <div class="w-[285px] h-auto shadow-lg border hover:shadow-2xl duration-200 rounded-2xl p-4">
+                        <div class="flex items-center justify-between mb-4">
+                            <img src="./assets/icons/icon-park-outline_like.svg" alt="Like icon"
+                                class="w-[24px] h-[24px]">
+                            <img src="./assets/icons/gg_filters.svg" alt="Rings icon" class="w-[24px] h-[24px]">
+                        </div>
+
+                        <img src="./assets/images/product.png" alt="Product image" class="w-[140px] h-[152px] mx-auto">
+
+                        <h3 class="mt-2 mb-4 text-lg text-[#100E0E] font-bold  text-center">
+                            Apple iPhone XS Max 256 ГБ золотой
+                        </h3>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-[5px]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none">
+                                    <circle cx="8" cy="8" r="8" fill="#52D116" />
+                                </svg>
+                                <p class="text-sm text-[#706E6E] font-medium">Есть в наличии</p>
+                            </div>
+                            <p class="text-sm text-[#706E6E] font-medium">Гарантия 1 год</p>
+                        </div>
+
+                        <div class="flex items-center justify-between mb-3">
+                            <p class="text-base text-[#878787] line-through">137 900 ₽</p>
+                            <h4 class="text-[20px] text-white bg-[#0071E4] p-[9px] rounded-lg flex gap-2 font-medium">
+                                137 900 ₽ <img src="./assets/icons/bi_cart-plus-fill.svg" alt="Cart"></h4>
+                        </div>
+
+                        <div class="flex justify-between">
+                            <p class="text-sm font-medium text-[#0071E4]">Хочу дешевле</p>
+                            <p class="text-sm font-medium text-[#706E6E]">Купить в 1 клик</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="new_models" class="py-8">
             <div class="container mx-auto px-5">
-                <h2 class="text-[32px] text-[#100E0E] font-bold mb-[22px]">Новые модели Айфонов по выгодным ценам</h2>
+                <h2 class="text-2xl md:text-[32px] text-[#100E0E] font-bold mb-[22px]">Новые модели Айфонов по выгодным
+                    ценам</h2>
 
                 <p class="text-base text-[#585656]">
                     Для тех, кто хочет приобрести новый телефон магазин Istoreapple.ru предлагает:
@@ -298,16 +356,17 @@
 
         <section id="iphone_14_pro-max" class="bg-black">
             <div class="container mx-auto px-5">
-                <div class="flex items-center gap-[90px]">
-                    <img src="./assets/images/design_startframe__large.png" alt="Iphone 14 large image">
+                <div class="flex items-center justify-between md:gap-[120px] md:justify-start lg:gap-[90px]">
+                    <img src="./assets/images/design_startframe__large.png" alt="Iphone 14 large image"
+                        class="w-[80px] h-[163px] md:w-[200px] md:h-auto">
 
-                    <div>
-                        <h2 class="text-white text-[56px] font-bold">iPhone 14 Pro Max</h2>
+                    <div class="my-0 md:my-10">
+                        <h2 class="text-white text-xl md:text-[32px] lg:text-[56px] font-bold">iPhone 14 Pro Max</h2>
 
-                        <p class="text-white text-2xl font-medium mt-4 mb-6">по лучшей цене в Москве</p>
+                        <p class="text-white md:text-base lg:text-2xl font-medium mt-4 mb-6">по лучшей цене в Москве</p>
 
                         <button
-                            class="w-[160px] h-[56px] flex items-center justify-center text-white text-base font-medium bg-[#0071E4] hover:bg-[#2A93FD] active:bg-[#0071E4] rounded-lg">
+                            class="w-[160px] h-[40px] md:h-[56px] flex items-center justify-center text-white text-base font-medium bg-[#0071E4] hover:bg-[#2A93FD] active:bg-[#0071E4] rounded-lg">
                             подробнее
                         </button>
                     </div>
@@ -317,7 +376,8 @@
 
         <section id="new_models" class="py-8">
             <div class="container mx-auto px-5">
-                <h2 class="text-[32px] text-[#100E0E] font-bold mb-[22px]">Новые модели Айфонов по выгодным ценам</h2>
+                <h2 class="text-2xl md:text-[32px] text-[#100E0E] font-bold mb-[22px]">Новые модели Айфонов по выгодным
+                    ценам</h2>
 
                 <p class="text-base text-[#585656]">
                     Для тех, кто хочет приобрести новый телефон магазин Istoreapple.ru предлагает:
@@ -340,69 +400,102 @@
         </section>
 
         <section id="new_products" class="py-10">
-            <div class="container mx-auto px-5">
-                <p class="text-[#0071E4] text-2xl font-medium mb-6">Новинки</p>
-
-                <div class="wrapper flex flex-wrap gap-6">
-                    <div class="w-[300px] px-2 py-4 shadow-lg border hover:shadow-2xl duration-200 rounded-2xl">
-                        <div class="flex items-center justify-between">
-                            <div class="text-2xl flex items-center">
-                                <i class='bx bxs-star' style='color:#FFAD31'></i>
-                                <i class='bx bxs-star' style='color:#FFAD31'></i>
-                                <i class='bx bxs-star' style='color:#FFAD31'></i>
-                                <i class='bx bxs-star' style='color:#FFAD31'></i>
-                                <i class='bx bxs-star' style='color:#DBDBDB'></i>
-                                <span class="text-base text-[#0071E4] font-medium ml-2">(14)</span>
-                            </div>
-
-                            <div class="flex gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none">
-                                    <path
-                                        d="M7.5 4C4.4625 4 2 6.4625 2 9.5C2 15 8.5 20 12 21.163C15.5 20 22 15 22 9.5C22 6.4625 19.5375 4 16.5 4C14.64 4 12.995 4.9235 12 6.337C11.4928 5.6146 10.8191 5.02505 10.0358 4.61824C9.25245 4.21144 8.38265 3.99938 7.5 4Z"
-                                        stroke="#585656" stroke-width="2.4" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M4.70824 15.44C5.87901 16.2624 7.27454 16.7044 8.70524 16.706C9.14611 17.9066 9.90745 18.9634 10.9066 19.7617C11.9057 20.5601 13.1045 21.0694 14.3727 21.2345C15.641 21.3995 16.9302 21.214 18.1004 20.698C19.2706 20.182 20.2771 19.3553 21.0106 18.3076C21.744 17.2599 22.1765 16.0313 22.2609 14.7552C22.3454 13.4791 22.0786 12.2042 21.4895 11.069C20.9005 9.9338 20.0117 8.98167 18.9197 8.31599C17.8277 7.65031 16.5742 7.29652 15.2952 7.29304C14.9164 6.26187 14.3002 5.33433 13.4965 4.58545C12.6927 3.83657 11.724 3.28738 10.6687 2.98228C9.61334 2.67719 8.501 2.62476 7.42165 2.82924C6.34229 3.03373 5.32621 3.48938 4.4556 4.15934C3.58498 4.8293 2.88427 5.69477 2.41014 6.68574C1.93601 7.67671 1.70177 8.76537 1.72636 9.86365C1.75096 10.9619 2.03371 12.039 2.55173 13.0077C3.06975 13.9765 3.80851 14.8097 4.70824 15.44ZM5.85524 13.8C6.57356 14.3047 7.41261 14.6104 8.28724 14.686C8.19701 13.1171 8.63962 11.5638 9.54324 10.278C10.4426 8.98942 11.7511 8.04254 13.2562 7.59104C12.9319 6.8963 12.452 6.28547 11.8539 5.80578C11.2557 5.3261 10.5552 4.9904 9.80661 4.82466C9.05799 4.65891 8.28128 4.66756 7.53654 4.84993C6.7918 5.0323 6.09898 5.3835 5.51164 5.87639C4.92431 6.36927 4.4582 6.99063 4.14935 7.69243C3.8405 8.39422 3.69719 9.15764 3.7305 9.92366C3.76381 10.6897 3.97285 11.4378 4.34145 12.1101C4.71005 12.7824 5.22834 13.361 5.85624 13.801L5.85524 13.8ZM18.1452 10.197C17.4268 9.69274 16.5878 9.38742 15.7132 9.31204C15.8035 10.881 15.3609 12.4343 14.4572 13.72C13.5579 15.0087 12.2494 15.9555 10.7442 16.407C11.0686 17.1018 11.5485 17.7126 12.1466 18.1923C12.7448 18.672 13.4453 19.0077 14.1939 19.1734C14.9425 19.3392 15.7192 19.3305 16.4639 19.1482C17.2087 18.9658 17.9015 18.6146 18.4888 18.1217C19.0762 17.6288 19.5423 17.0075 19.8511 16.3057C20.16 15.6039 20.3033 14.8404 20.27 14.0744C20.2367 13.3084 20.0276 12.5603 19.659 11.888C19.2904 11.2156 18.7721 10.6371 18.1442 10.197H18.1452Z"
-                                        fill="#585656" />
-                                </svg>
-                            </div>
+            <div class="xl_wrapper lg:flex flex-wrap justify-center gap-6 hidden">
+                <div class="w-[300px] px-2 py-4 shadow-lg border hover:shadow-2xl duration-200 rounded-2xl">
+                    <div class="flex items-center justify-between">
+                        <div class="text-2xl flex items-center">
+                            <i class='bx bxs-star' style='color:#FFAD31'></i>
+                            <i class='bx bxs-star' style='color:#FFAD31'></i>
+                            <i class='bx bxs-star' style='color:#FFAD31'></i>
+                            <i class='bx bxs-star' style='color:#FFAD31'></i>
+                            <i class='bx bxs-star' style='color:#DBDBDB'></i>
+                            <span class="text-base text-[#0071E4] font-medium ml-2">(14)</span>
                         </div>
 
-                        <div class="my-4">
-                            <h2 class="text-2xl text-[#100E0E] font-medium text-center mb-2">Apple iPhone XS Max 256 ГБ
-                                золотой</h2>
+                        <div class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M7.5 4C4.4625 4 2 6.4625 2 9.5C2 15 8.5 20 12 21.163C15.5 20 22 15 22 9.5C22 6.4625 19.5375 4 16.5 4C14.64 4 12.995 4.9235 12 6.337C11.4928 5.6146 10.8191 5.02505 10.0358 4.61824C9.25245 4.21144 8.38265 3.99938 7.5 4Z"
+                                    stroke="#585656" stroke-width="2.4" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
 
-                            <img src="./assets/images/product.png" alt="Product image" class="mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.70824 15.44C5.87901 16.2624 7.27454 16.7044 8.70524 16.706C9.14611 17.9066 9.90745 18.9634 10.9066 19.7617C11.9057 20.5601 13.1045 21.0694 14.3727 21.2345C15.641 21.3995 16.9302 21.214 18.1004 20.698C19.2706 20.182 20.2771 19.3553 21.0106 18.3076C21.744 17.2599 22.1765 16.0313 22.2609 14.7552C22.3454 13.4791 22.0786 12.2042 21.4895 11.069C20.9005 9.9338 20.0117 8.98167 18.9197 8.31599C17.8277 7.65031 16.5742 7.29652 15.2952 7.29304C14.9164 6.26187 14.3002 5.33433 13.4965 4.58545C12.6927 3.83657 11.724 3.28738 10.6687 2.98228C9.61334 2.67719 8.501 2.62476 7.42165 2.82924C6.34229 3.03373 5.32621 3.48938 4.4556 4.15934C3.58498 4.8293 2.88427 5.69477 2.41014 6.68574C1.93601 7.67671 1.70177 8.76537 1.72636 9.86365C1.75096 10.9619 2.03371 12.039 2.55173 13.0077C3.06975 13.9765 3.80851 14.8097 4.70824 15.44ZM5.85524 13.8C6.57356 14.3047 7.41261 14.6104 8.28724 14.686C8.19701 13.1171 8.63962 11.5638 9.54324 10.278C10.4426 8.98942 11.7511 8.04254 13.2562 7.59104C12.9319 6.8963 12.452 6.28547 11.8539 5.80578C11.2557 5.3261 10.5552 4.9904 9.80661 4.82466C9.05799 4.65891 8.28128 4.66756 7.53654 4.84993C6.7918 5.0323 6.09898 5.3835 5.51164 5.87639C4.92431 6.36927 4.4582 6.99063 4.14935 7.69243C3.8405 8.39422 3.69719 9.15764 3.7305 9.92366C3.76381 10.6897 3.97285 11.4378 4.34145 12.1101C4.71005 12.7824 5.22834 13.361 5.85624 13.801L5.85524 13.8ZM18.1452 10.197C17.4268 9.69274 16.5878 9.38742 15.7132 9.31204C15.8035 10.881 15.3609 12.4343 14.4572 13.72C13.5579 15.0087 12.2494 15.9555 10.7442 16.407C11.0686 17.1018 11.5485 17.7126 12.1466 18.1923C12.7448 18.672 13.4453 19.0077 14.1939 19.1734C14.9425 19.3392 15.7192 19.3305 16.4639 19.1482C17.2087 18.9658 17.9015 18.6146 18.4888 18.1217C19.0762 17.6288 19.5423 17.0075 19.8511 16.3057C20.16 15.6039 20.3033 14.8404 20.27 14.0744C20.2367 13.3084 20.0276 12.5603 19.659 11.888C19.2904 11.2156 18.7721 10.6371 18.1442 10.197H18.1452Z"
+                                    fill="#585656" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="my-4">
+                        <h2 class="text-2xl text-[#100E0E] font-medium text-center mb-2">Apple iPhone XS Max 256 ГБ
+                            золотой</h2>
+
+                        <img src="./assets/images/product.png" alt="Product image" class="mx-auto">
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-[5px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <circle cx="8" cy="8" r="8" fill="#52D116" />
+                            </svg>
+
+                            <p class="">Есть в наличии</p>
                         </div>
 
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-[5px]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <circle cx="8" cy="8" r="8" fill="#52D116" />
-                                </svg>
+                        <p class="">Гарантия 1 год</p>
+                    </div>
 
-                                <p class="">Есть в наличии</p>
-                            </div>
+                    <div class="flex justify-between items-center mt-1 mb-4">
+                        <p class="text-[20px] text-[#878787] line-through">137 900 ₽</p>
+                        <h4 class="text-[32px] text-[#100E0E] ">137 900 ₽</h4>
+                    </div>
 
-                            <p class="">Гарантия 1 год</p>
+                    <button
+                        class="w-full h-[56px] bg-[#0071E4] flex items-center justify-center gap-2 text-white text-lg font-medium rounded-lg">
+                        <img src="./assets/icons/bi_cart-plus-fill.svg" alt="Cart icon">
+                        в корзину
+                    </button>
+                </div>
+            </div>
+
+            <div class="md_wrapper lg:hidden flex flex-wrap justify-center gap-10">
+                <div class="w-[285px] h-auto shadow-lg border hover:shadow-2xl duration-200 rounded-2xl p-4">
+                    <div class="flex items-center justify-between mb-4">
+                        <img src="./assets/icons/icon-park-outline_like.svg" alt="Like icon" class="w-[24px] h-[24px]">
+                        <img src="./assets/icons/gg_filters.svg" alt="Rings icon" class="w-[24px] h-[24px]">
+                    </div>
+
+                    <img src="./assets/images/product.png" alt="Product image" class="w-[140px] h-[152px] mx-auto">
+
+                    <h3 class="mt-2 mb-4 text-lg text-[#100E0E] font-bold  text-center">
+                        Apple iPhone XS Max 256 ГБ золотой
+                    </h3>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-[5px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <circle cx="8" cy="8" r="8" fill="#52D116" />
+                            </svg>
+                            <p class="text-sm text-[#706E6E] font-medium">Есть в наличии</p>
                         </div>
+                        <p class="text-sm text-[#706E6E] font-medium">Гарантия 1 год</p>
+                    </div>
 
-                        <div class="flex justify-between items-center mt-1 mb-4">
-                            <p class="text-[20px] text-[#878787] line-through">137 900 ₽</p>
-                            <h4 class="text-[32px] text-[#100E0E] ">137 900 ₽</h4>
-                        </div>
+                    <div class="flex items-center justify-between mb-3">
+                        <p class="text-base text-[#878787] line-through">137 900 ₽</p>
+                        <h4 class="text-[20px] text-white bg-[#0071E4] p-[9px] rounded-lg flex gap-2 font-medium">137
+                            900 ₽ <img src="./assets/icons/bi_cart-plus-fill.svg" alt="Cart"></h4>
+                    </div>
 
-                        <button
-                            class="w-full h-[56px] bg-[#0071E4] flex items-center justify-center gap-2 text-white text-lg font-medium rounded-lg">
-                            <img src="./assets/icons/bi_cart-plus-fill.svg" alt="Cart icon">
-                            в корзину
-                        </button>
+                    <div class="flex justify-between">
+                        <p class="text-sm font-medium text-[#0071E4]">Хочу дешевле</p>
+                        <p class="text-sm font-medium text-[#706E6E]">Купить в 1 клик</p>
                     </div>
                 </div>
             </div>
@@ -410,82 +503,230 @@
 
         <section id="advantages" class="py-10">
             <div class="container mx-auto px-5">
-                <h2 class="text-[32px] text-[#100E0E] font-bold text-center mb-6">Наши преимущества</h2>
+                <h2 class="text-2xl md:text-[32px] text-[#100E0E] font-bold text-center mb-6">Наши преимущества</h2>
 
-                <div class="flex justify-between">
-                    <div class="card w-[230px] pt-6 px-2 pb-8 rounded-2xl">
-                        <img src="./assets/images/discount.png" alt="Discount image" class="mx-auto">
+                <div class="hidden xl:flex lg:flex-col xl:flex-row lg:items-center xl:justify-between gap-3 xl:gap-0">
+                    <div class="card lg:w-[720px] xl:w-[230px] flex xl:block p-6 xl:pt-6 xl:px-2 xl:pb-8 rounded-2xl">
+                        <img src="./assets/images/discount.png" alt="Discount image"
+                            class="w-16 h-16 xl:w-auto xl:h-auto xl:mx-auto">
 
-                        <h3 class="text-xl text-[#100E0E] font-bold mt-4 mb-2 text-center">Акции и подарки</h3>
+                        <div class="ml-6 mr-4 xl:m-0">
+                            <h3 class="text-xl text-[#100E0E] font-bold xl:mt-4 mb-2 text-start xl:text-center">Акции и
+                                подарки</h3>
 
-                        <p class="text-sm text-[#585656] text-center mb-6 h-[115px]">
-                            Постоянные акции, бонусы и скидки. Покупайте технику Apple по самым выгодным ценам
-                        </p>
+                            <p class="text-sm text-[#585656] text-start xl:text-center xl:mb-6 xl:h-[115px]">
+                                Постоянные акции, бонусы и скидки. Покупайте технику Apple по самым выгодным ценам
+                            </p>
+                        </div>
 
                         <button
-                            class="w-full h-[56px] flex justify-center items-center text-lg text-[#0071E4] border border-[#0071E4] hover:bg-[#2A93FD] hover:text-white active:bg-[#0071E4] rounded-lg">
+                            class="min-w-[215px] xl:w-full h-[56px] flex justify-center items-center my-auto xl:my-0 text-lg text-[#0071E4] border border-[#0071E4] hover:bg-[#2A93FD] hover:text-white active:bg-[#0071E4] rounded-lg">
                             подробнее
                         </button>
                     </div>
 
-                    <div class="card w-[230px] pt-6 px-2 pb-8 rounded-2xl">
-                        <img src="./assets/images/delivery.png" alt="Delivery image" class="mx-auto">
+                    <div class="card lg:w-[720px] xl:w-[230px] flex xl:block p-6 xl:pt-6 xl:px-2 xl:pb-8 rounded-2xl">
+                        <img src="./assets/images/delivery.png" alt="Delivery image"
+                            class="w-16 h-16 xl:w-auto xl:h-auto xl:mx-auto">
 
-                        <h3 class="text-xl text-[#100E0E] font-bold mt-4 mb-2 text-center">Доставим за 3 часа</h3>
+                        <div class="ml-6 mr-4 xl:m-0">
+                            <h3 class="text-xl text-[#100E0E] font-bold xl:mt-4 mb-2 text-start xl:text-center">Доставим
+                                за 3 часа</h3>
 
-                        <p class="text-sm text-[#585656] text-center mb-6 h-[115px]">
-                            Быстрая и бесплатная доставка по Москве. Доставим за 3 часа в день заказа. Также доступна
-                            быстрая доставка по всей России или самовывоз
-                        </p>
+                            <p class="text-sm text-[#585656] text-start xl:text-center xl:mb-6 xl:h-[115px]">
+                                Быстрая и бесплатная доставка по Москве. Доставим за 3 часа в день заказа. Также
+                                доступна
+                                быстрая доставка по всей России или самовывоз
+                            </p>
+                        </div>
 
                         <button
-                            class="w-full h-[56px] flex justify-center items-center text-lg text-[#0071E4] border border-[#0071E4] hover:bg-[#2A93FD] hover:text-white active:bg-[#0071E4] rounded-lg">
+                            class="min-w-[215px] xl:w-full h-[56px] flex justify-center items-center my-auto text-lg text-[#0071E4] border border-[#0071E4] hover:bg-[#2A93FD] hover:text-white active:bg-[#0071E4] rounded-lg">
                             подробнее
                         </button>
                     </div>
 
-                    <div class="card w-[230px] pt-6 px-2 pb-8 rounded-2xl">
-                        <img src="./assets/images/card_wallet.png" alt="Wallet image" class="mx-auto">
+                    <div class="card lg:w-[720px] xl:w-[230px] flex xl:block p-6 xl:pt-6 xl:px-2 xl:pb-8 rounded-2xl">
+                        <img src="./assets/images/card_wallet.png" alt="Wallet image"
+                            class="w-16 h-16 xl:w-auto xl:h-auto xl:mx-auto">
 
-                        <h3 class="text-xl text-[#100E0E] font-bold mt-4 mb-2 text-center">Удобные способы оплаты</h3>
+                        <div class="ml-6 mr-4 xl:m-0">
+                            <h3 class="text-xl text-[#100E0E] font-bold xl:mt-4 mb-2 text-start xl:text-center">Удобные
+                                способы оплаты</h3>
 
-                        <p class="text-sm text-[#585656] text-center mb-6 h-[87px]">
-                            Наличными или картой при получении, оплата на сайте или в кредит
-                        </p>
+                            <p class="text-sm text-[#585656] text-start xl:text-center xl:mb-6 xl:h-[115px]">
+                                Наличными или картой при получении, оплата на сайте или в кредит
+                            </p>
+                        </div>
 
                         <button
-                            class="w-full h-[56px] flex justify-center items-center text-lg text-[#0071E4] border border-[#0071E4] hover:bg-[#2A93FD] hover:text-white active:bg-[#0071E4] rounded-lg">
+                            class="min-w-[215px] xl:w-full h-[56px] flex justify-center items-center my-auto text-lg text-[#0071E4] border border-[#0071E4] hover:bg-[#2A93FD] hover:text-white active:bg-[#0071E4] rounded-lg">
                             подробнее
                         </button>
                     </div>
 
-                    <div class="card w-[230px] pt-6 px-2 pb-8 rounded-2xl">
-                        <img src="./assets/images/building_columns.png" alt="Building image" class="mx-auto">
+                    <div class="card lg:w-[720px] xl:w-[230px] flex xl:block p-6 xl:pt-6 xl:px-2 xl:pb-8 rounded-2xl">
+                        <img src="./assets/images/building_columns.png" alt="Building image"
+                            class="w-16 h-16 xl:w-auto xl:h-auto xl:mx-auto">
 
-                        <h3 class="text-xl text-[#100E0E] font-bold mt-4 mb-2 text-center">Покупка в кредит</h3>
+                        <div class="ml-6 mr-4 xl:m-0">
+                            <h3 class="text-xl text-[#100E0E] font-bold xl:mt-4 mb-2 text-start xl:text-center">Покупка
+                                в кредит</h3>
 
-                        <p class="text-sm text-[#585656] text-center mb-6 h-[115px]">
-                            Получите самое выгодное кредитное предложение от более чем 30 ведущих банков страны
-                        </p>
+                            <p class="text-sm text-[#585656] text-start xl:text-center xl:mb-6 xl:h-[115px]">
+                                Получите самое выгодное кредитное предложение от более чем 30 ведущих банков страны
+                            </p>
+                        </div>
 
                         <button
-                            class="w-full h-[56px] flex justify-center items-center text-lg text-[#0071E4] border border-[#0071E4] hover:bg-[#2A93FD] hover:text-white active:bg-[#0071E4] rounded-lg">
+                            class="min-w-[215px] xl:w-full h-[56px] flex justify-center items-center my-auto text-lg text-[#0071E4] border border-[#0071E4] hover:bg-[#2A93FD] hover:text-white active:bg-[#0071E4] rounded-lg">
                             подробнее
                         </button>
                     </div>
 
-                    <div class="card w-[230px] pt-6 px-2 pb-8 rounded-2xl">
-                        <img src="./assets/images/approval.png" alt="Approval image" class="mx-auto">
+                    <div class="card lg:w-[720px] xl:w-[230px] flex xl:block p-6 xl:pt-6 xl:px-2 xl:pb-8 rounded-2xl">
+                        <img src="./assets/images/approval.png" alt="Approval image"
+                            class="w-16 h-16 xl:w-auto xl:h-auto xl:mx-auto">
 
-                        <h3 class="text-xl text-[#100E0E] font-bold mt-4 mb-2 text-center">Гарантия</h3>
+                        <div class="ml-6 mr-4 xl:m-0">
+                            <h3 class="text-xl text-[#100E0E] font-bold xl:mt-4 mb-2 text-start xl:text-center">Гарантия
+                            </h3>
 
-                        <p class="text-sm text-[#585656] text-center mb-6 h-[115px]">
-                            Все товары, представленные в нашем сайте, имеют гарантию
-                            от нашего магазина или компании Apple
-                        </p>
+                            <p class="text-sm text-[#585656] text-start xl:text-center xl:mb-6 xl:h-[115px]">
+                                Все товары, представленные в нашем сайте, имеют гарантию
+                                от нашего магазина или компании Apple
+                            </p>
+                        </div>
 
                         <button
-                            class="w-full h-[56px] flex justify-center items-center text-lg text-[#0071E4] border border-[#0071E4] hover:bg-[#2A93FD] hover:text-white active:bg-[#0071E4] rounded-lg">
+                            class="min-w-[215px] xl:w-full h-[56px] flex justify-center items-center my-auto text-lg text-[#0071E4] border border-[#0071E4] hover:bg-[#2A93FD] hover:text-white active:bg-[#0071E4] rounded-lg">
+                            подробнее
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex xl:hidden flex-col xl:flex-row lg:items-center xl:justify-between gap-3 xl:gap-0">
+                    <div
+                        class="card2 bg-[#F9F9F9] lg:w-[720px] xl:w-[230px] flex xl:block p-6 xl:pt-6 xl:px-2 xl:pb-8 rounded-2xl">
+                        <img src="./assets/images/discount.png" alt="Discount image"
+                            class="w-16 h-16 xl:w-auto xl:h-auto xl:mx-auto hidden md:flex">
+
+                        <div class="ml-6 mr-4 xl:m-0">
+                            <div class="flex items-center gap-2">
+                                <img src="./assets/images/discount.png" alt="Discount image" class="w-8 h-8 md:hidden">
+                                <h3 class="text-xl text-[#100E0E] font-bold xl:mt-4 md:mb-2 text-start xl:text-center">
+                                    Акции и подарки
+                                </h3>
+                            </div>
+
+                            <p class="text-sm text-[#585656] text-start xl:text-center xl:mb-6 xl:h-[115px]">
+                                Постоянные акции, бонусы и скидки. Покупайте технику Apple по самым выгодным ценам
+                            </p>
+                        </div>
+
+                        <button
+                            class="min-w-[215px] xl:w-full h-[56px] md:flex justify-center items-center my-auto xl:my-0 text-lg text-[#0071E4] border border-[#0071E4] hover:bg-[#2A93FD] hover:text-white active:bg-[#0071E4] rounded-lg hidden">
+                            подробнее
+                        </button>
+                    </div>
+
+                    <div
+                        class="card2 bg-[#F9F9F9] lg:w-[720px] xl:w-[230px] flex xl:block p-6 xl:pt-6 xl:px-2 xl:pb-8 rounded-2xl">
+                        <img src="./assets/images/delivery.png" alt="Delivery image"
+                            class="w-16 h-16 xl:w-auto xl:h-auto xl:mx-auto hidden md:flex">
+
+                        <div class="ml-6 mr-4 xl:m-0">
+                            <div class="flex items-center gap-2">
+                                <img src="./assets/images/delivery.png" alt="Delivery image" class="w-8 h-8 md:hidden">
+                                <h3 class="text-xl text-[#100E0E] font-bold xl:mt-4 md:mb-2 text-start xl:text-center">
+                                    Доставим за 3 часа
+                                </h3>
+                            </div>
+
+                            <p class="text-sm text-[#585656] text-start xl:text-center xl:mb-6 xl:h-[115px]">
+                                Быстрая и бесплатная доставка по Москве. Доставим за 3 часа в день заказа. Также
+                                доступна
+                                быстрая доставка по всей России или самовывоз
+                            </p>
+                        </div>
+
+                        <button
+                            class="min-w-[215px] xl:w-full h-[56px] md:flex justify-center items-center my-auto text-lg text-[#0071E4] border border-[#0071E4] hover:bg-[#2A93FD] hover:text-white active:bg-[#0071E4] rounded-lg hidden">
+                            подробнее
+                        </button>
+                    </div>
+
+                    <div
+                        class="card2 bg-[#F9F9F9] lg:w-[720px] xl:w-[230px] flex xl:block p-6 xl:pt-6 xl:px-2 xl:pb-8 rounded-2xl">
+                        <img src="./assets/images/card_wallet.png" alt="Wallet image"
+                            class="w-16 h-16 xl:w-auto xl:h-auto xl:mx-auto hidden md:flex">
+
+                        <div class="ml-6 mr-4 xl:m-0">
+                            <div class="flex items-center gap-2">
+                                <img src="./assets/images/card_wallet.png" alt="Card Wallet image"
+                                    class="w-8 h-8 md:hidden">
+                                <h3 class="text-xl text-[#100E0E] font-bold xl:mt-4 md:mb-2 text-start xl:text-center">
+                                    Удобные способы оплаты
+                                </h3>
+                            </div>
+
+                            <p class="text-sm text-[#585656] text-start xl:text-center xl:mb-6 xl:h-[115px]">
+                                Наличными или картой при получении, оплата на сайте или в кредит
+                            </p>
+                        </div>
+
+                        <button
+                            class="min-w-[215px] xl:w-full h-[56px] md:flex justify-center items-center my-auto text-lg text-[#0071E4] border border-[#0071E4] hover:bg-[#2A93FD] hover:text-white active:bg-[#0071E4] rounded-lg hidden">
+                            подробнее
+                        </button>
+                    </div>
+
+                    <div
+                        class="card2 bg-[#F9F9F9] lg:w-[720px] xl:w-[230px] flex xl:block p-6 xl:pt-6 xl:px-2 xl:pb-8 rounded-2xl">
+                        <img src="./assets/images/building_columns.png" alt="Building image"
+                            class="w-16 h-16 xl:w-auto xl:h-auto xl:mx-auto hidden md:flex">
+
+                        <div class="ml-6 mr-4 xl:m-0">
+                            <div class="flex items-center gap-2">
+                                <img src="./assets/images/building_columns.png" alt="Building image"
+                                    class="w-8 h-8 md:hidden">
+                                <h3 class="text-xl text-[#100E0E] font-bold xl:mt-4 md:mb-2 text-start xl:text-center">
+                                    Покупка в кредит
+                                </h3>
+                            </div>
+
+                            <p class="text-sm text-[#585656] text-start xl:text-center xl:mb-6 xl:h-[115px]">
+                                Получите самое выгодное кредитное предложение от более чем 30 ведущих банков страны
+                            </p>
+                        </div>
+
+                        <button
+                            class="min-w-[215px] xl:w-full h-[56px] md:flex justify-center items-center my-auto text-lg text-[#0071E4] border border-[#0071E4] hover:bg-[#2A93FD] hover:text-white active:bg-[#0071E4] rounded-lg hidden">
+                            подробнее
+                        </button>
+                    </div>
+
+                    <div
+                        class="card2 bg-[#F9F9F9] lg:w-[720px] xl:w-[230px] flex xl:block p-6 xl:pt-6 xl:px-2 xl:pb-8 rounded-2xl">
+                        <img src="./assets/images/approval.png" alt="Approval image"
+                            class="w-16 h-16 xl:w-auto xl:h-auto xl:mx-auto hidden md:flex">
+
+                        <div class="ml-6 mr-4 xl:m-0">
+                            <div class="flex items-center gap-2">
+                                <img src="./assets/images/approval.png" alt="Approval image" class="w-8 h-8 md:hidden">
+                                <h3 class="text-xl text-[#100E0E] font-bold xl:mt-4 md:mb-2 text-start xl:text-center">
+                                    Гарантия
+                                </h3>
+                            </div>
+
+                            <p class="text-sm text-[#585656] text-start xl:text-center xl:mb-6 xl:h-[115px]">
+                                Все товары, представленные в нашем сайте, имеют гарантию
+                                от нашего магазина или компании Apple
+                            </p>
+                        </div>
+
+                        <button
+                            class="min-w-[215px] xl:w-full h-[56px] md:flex justify-center items-center my-auto text-lg text-[#0071E4] border border-[#0071E4] hover:bg-[#2A93FD] hover:text-white active:bg-[#0071E4] rounded-lg hidden">
                             подробнее
                         </button>
                     </div>
@@ -496,20 +737,24 @@
         <section id="subscribe" class="py-10">
             <div class="container mx-auto px-5">
                 <div class="flex items-center gap-[86px]">
-                    <img src="./assets/images/subscribe_img.jpg" alt="Subscribe image">
+                    <img src="./assets/images/subscribe_img.jpg" alt="Subscribe image"
+                        class="w-[260px] lg:w-[380px] xl:w-[485px] hidden md:flex">
 
                     <div class="">
-                        <h2 class="text-5xl text-[#100E0E] font-bold">Подписка на <br> рассылку акций!</h2>
+                        <h2 class="text-2xl md:text-[32px] xl:text-5xl text-[#100E0E] font-bold">Подписка на <br>
+                            рассылку акций!</h2>
 
-                        <p class="text-2xl text-[#585656] mt-2 mb-[25px]">Подпишитесь на рассылку, чтобы узнавать о всех
+                        <p class="text-base lg:text-2xl text-[#585656] mt-2 mb-[25px]">Подпишитесь на рассылку, чтобы
+                            узнавать о всех
                             акциях первым</p>
 
-                        <div class="sub_card max-w-[486px]">
-                            <h3 class="text-[40px] text-white font-bold">Скидка 10%</h3>
+                        <div class="sub_card px-4 py-2 lg:pt-4 lg:pb-8 lg:px-8 md:max-w-[320px] lg:max-w-[486px]">
+                            <h3 class="text-base md:text-xl text-[40px] text-white font-bold">Скидка 10%</h3>
 
-                            <p class="text-xl text-white font-medium mt-1 mb-4">на первую покупку за подписку</p>
+                            <p class="text-sm md:text-base lg:text-xl text-white font-medium mt-1 mb-4">на первую
+                                покупку за подписку</p>
 
-                            <div class="flex justify-between">
+                            <div class="hidden lg:flex justify-between">
                                 <input type="number" placeholder="+7"
                                     class="px-6 h-[56px] border border-[#DBDBDB] rounded-lg">
                                 <button
@@ -518,6 +763,15 @@
                                 </button>
                             </div>
                         </div>
+
+                        <div class="flex lg:hidden flex-col md:flex-row mt-4 gap-2">
+                            <input type="number" placeholder="+7"
+                                class="px-6 h-[56px] border border-[#DBDBDB] rounded-lg">
+                            <button
+                                class="w-full md:w-[160px] h-[56px] bg-[#E7E7E7] text-base text-[#585656] font-medium rounded-lg hover:bg-white border border-transparent hover:border-[#0071E4] hover:text-[#0071E4] active:bg-[#0071E4] active:text-white">
+                                подписаться
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -525,36 +779,41 @@
 
         <footer class="py-10">
             <div class="container mx-auto px-5">
-                <div class="flex">
-                    <ul>
+                <div class="flex flex-col lg:flex-row justify-between">
+                    <ul class="flex flex-col items-center md:items-start mb-6 lg:mb-0">
+                        <div class="flex lg:flex-col gap-6">
+                            <li>
+                                <a href="./index.html"><img src="./assets/icons/logo.svg" alt="Footer logo"
+                                        class="w-[39px] h-[45px] mb-0 lg:mb-[27px]"></a>
+                            </li>
+                            <li>
+                                <div>
+                                    <p class="text-base text-[#878787] mb-1 lg:mb-2">© 2013-2022</p>
+                                    <p class="text-base text-[#878787] mb-1 lg:mb-6">Продажа iPhone в МСК</p>
+                                </div>
+                            </li>
+                        </div>
                         <li>
-                            <a href="./index.html"><img src="./assets/icons/logo.svg" alt="Footer logo" class="w-[39px] h-[45px] mb-[27px]"></a>
-                        </li>
-                        <li>
-                            <div>
-                                <p class="text-base text-[#878787] mb-2">© 2013-2022</p>
-                                <p class="text-base text-[#878787] mb-6">Продажа iPhone в МСК</p>
-                            </div>
-                        </li>
-                        <li>
-                            <p class="text-sm text-[#B7B7B7] w-[310px]">
+                            <p class="text-sm text-center md:text-start text-[#B7B7B7] w-[310px]">
                                 *Сайт не является публичной оффертой. Вся информация, указанная на сайте носит
                                 информационный характер.
                             </p>
                         </li>
                     </ul>
 
-                    <ul class="text-base text-[#100E0E] flex flex-col gap-4 ml-12 mr-12">
+                    <ul
+                        class="text-base text-[#100E0E] flex flex-col gap-2 md:flex-row md:gap-4 md:flex-wrap lg:flex-col xl:gap-4 m-0 md:mb-8">
                         <li><a href="#">Гарантия</a></li>
                         <li><a href="#">Политика возврата</a></li>
                         <li><a href="#">Кредит</a></li>
                         <li><a href="#">Доставка и оплата</a></li>
                         <li><a href="#">Отзывы</a></li>
                         <li><a href="#">Контакты</a></li>
-                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Политика конфеденциальности</a></li>
                     </ul>
 
-                    <ul class="text-base text-[#100E0E] flex flex-col gap-4 mr-[155px]">
+                    <ul
+                        class="text-base text-[#100E0E] flex flex-col gap-2 md:flex-row md:gap-4 lg:flex-col xl:gap-4 m-0 md:mb-8">
                         <li><a href="#">iPhone</a></li>
                         <li><a href="#">iPad</a></li>
                         <li><a href="#">Macbook и iMac</a></li>
@@ -563,17 +822,24 @@
                         <li><a href="#">Акции</a></li>
                     </ul>
 
-                    <ul>
+                    <ul class="md:flex lg:flex-col justify-between lg:w-[315px]">
+                        <div class="md:flex lg:flex-col gap-4">
+                            <li>
+                                <h2 class="text-2xl lg:text-[36px] text-[#100E0E] font-medium">+7 812 704 86 97</h2>
+                            </li>
+                            <li>
+                                <p class="text-xs lg:text-sm text-[#706E6E] mb-2">Бесплатная консультация <br> С 10:00
+                                    до
+                                    21:00, без
+                                    выходных
+                                </p>
+                            </li>
+                        </div>
                         <li>
-                            <h2 class="text-[40px] text-[#100E0E] font-medium">+7 812 704 86 97</h2>
-                        </li>
-                        <li>
-                            <p class="text-sm text-[#706E6E] mb-2">Бесплатная консультация <br> С 10:00 до 21:00, без
-                                выходных</p>
-                        </li>
-                        <li>
-                            <div class="flex items-center gap-6">
-                                <a href="#" class="text-xl text-[#0071E4] font-medium">Заказать звонок</a>
+                            <div class="flex lg:items-center flex-col lg:flex-row gap-6">
+                                <a href="#"
+                                    class="md:hidden lg:flex text-base lg:text-xl text-[#0071E4] font-medium">Заказать
+                                    звонок</a>
                                 <div class="flex gap-3">
                                     <img src="./assets/icons/whatsapp.svg" alt="Whatsapp logo"
                                         class="hover:scale-110 cursor-pointer">
@@ -584,16 +850,78 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
-                            <p class="text-base text-[#100E0E] font-medium mt-9 mb-4">Москва, ул Барклая 8</p>
+
+                        <li class="flex md:hidden lg:flex">
+                            <p class="text-base text-[#100E0E] font-medium mt-4 mb-2 lg:mt-9 lg:mb-4">
+                                Москва, ул Барклая 8
+                            </p>
                         </li>
-                        <li>
+                        <li class="flex md:hidden lg:flex">
                             <p class="text-base text-[#100E0E] font-medium">Москва, ул Барклая 8</p>
                         </li>
                     </ul>
+
+                    <div class="hidden md:flex flex-col lg:hidden">
+                        <a href="#" class="md:flex text-base lg:text-xl text-[#0071E4] font-medium hidden">Заказать
+                            звонок
+                        </a>
+
+                        <ul class="flex flex-col">
+                            <li class="list-none">
+                                <p class="text-base text-[#100E0E] font-medium mt-4 mb-2 lg:mt-9 lg:mb-4">
+                                    Москва, ул Барклая 8
+                                </p>
+                            </li>
+                            <li class="list-none">
+                                <p class="text-base text-[#100E0E] font-medium">Москва, ул Барклая 8</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </footer>
+
+        <div class="md:px-6 fixed bottom-0 w-full bg-white lg:hidden">
+            <div class="container mx-auto px-5">
+                <div class="h-16 py-1 md:h-12 flex justify-between items-center">
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-2 w-[170px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.19995 12.7998C3.19995 12.3755 3.36852 11.9685 3.66858 11.6684C3.96864 11.3684 4.3756 11.1998 4.79995 11.1998H21.2928C21.7171 11.1998 22.1241 11.3684 22.4241 11.6684C22.7242 11.9685 22.8928 12.3755 22.8928 12.7998C22.8928 13.2242 22.7242 13.6311 22.4241 13.9312C22.1241 14.2312 21.7171 14.3998 21.2928 14.3998H4.79995C4.3756 14.3998 3.96864 14.2312 3.66858 13.9312C3.36852 13.6311 3.19995 13.2242 3.19995 12.7998ZM3.19995 6.3998C3.19995 5.97546 3.36852 5.56849 3.66858 5.26843C3.96864 4.96838 4.3756 4.7998 4.79995 4.7998H27.2C27.6243 4.7998 28.0313 4.96838 28.3313 5.26843C28.6314 5.56849 28.8 5.97546 28.8 6.3998C28.8 6.82415 28.6314 7.23112 28.3313 7.53118C28.0313 7.83123 27.6243 7.9998 27.2 7.9998H4.79995C4.3756 7.9998 3.96864 7.83123 3.66858 7.53118C3.36852 7.23112 3.19995 6.82415 3.19995 6.3998ZM3.19995 19.1998C3.19995 18.7755 3.36852 18.3685 3.66858 18.0684C3.96864 17.7684 4.3756 17.5998 4.79995 17.5998H27.2C27.6243 17.5998 28.0313 17.7684 28.3313 18.0684C28.6314 18.3685 28.8 18.7755 28.8 19.1998C28.8 19.6242 28.6314 20.0311 28.3313 20.3312C28.0313 20.6312 27.6243 20.7998 27.2 20.7998H4.79995C4.3756 20.7998 3.96864 20.6312 3.66858 20.3312C3.36852 20.0311 3.19995 19.6242 3.19995 19.1998ZM3.19995 25.5998C3.19995 25.1755 3.36852 24.7685 3.66858 24.4684C3.96864 24.1684 4.3756 23.9998 4.79995 23.9998H21.2928C21.7171 23.9998 22.1241 24.1684 22.4241 24.4684C22.7242 24.7685 22.8928 25.1755 22.8928 25.5998C22.8928 26.0242 22.7242 26.4311 22.4241 26.7312C22.1241 27.0312 21.7171 27.1998 21.2928 27.1998H4.79995C4.3756 27.1998 3.96864 27.0312 3.66858 26.7312C3.36852 26.4311 3.19995 26.0242 3.19995 25.5998Z"
+                                fill="#52D116" />
+                        </svg>
+                        <p class="text-xs text-[#282626] md:text-xl">каталог</p>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-2 w-[170px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path
+                                d="M8.66667 2.6665H23.3333C23.5403 2.6665 23.7445 2.7147 23.9296 2.80727C24.1148 2.89984 24.2758 3.03424 24.4 3.19984L28 7.99984V27.9998C28 28.3535 27.8595 28.6926 27.6095 28.9426C27.3594 29.1927 27.0203 29.3332 26.6667 29.3332H5.33333C4.97971 29.3332 4.64057 29.1927 4.39052 28.9426C4.14048 28.6926 4 28.3535 4 27.9998V7.99984L7.6 3.19984C7.7242 3.03424 7.88524 2.89984 8.07038 2.80727C8.25552 2.7147 8.45967 2.6665 8.66667 2.6665ZM24.6667 7.99984L22.6667 5.33317H9.33333L7.33333 7.99984H24.6667ZM12 13.3332H9.33333V15.9998C9.33333 17.7679 10.0357 19.4636 11.286 20.7139C12.5362 21.9641 14.2319 22.6665 16 22.6665C17.7681 22.6665 19.4638 21.9641 20.714 20.7139C21.9643 19.4636 22.6667 17.7679 22.6667 15.9998V13.3332H20V15.9998C20 17.0607 19.5786 18.0781 18.8284 18.8283C18.0783 19.5784 17.0609 19.9998 16 19.9998C14.9391 19.9998 13.9217 19.5784 13.1716 18.8283C12.4214 18.0781 12 17.0607 12 15.9998V13.3332Z"
+                                fill="#706E6E" />
+                        </svg>
+                        <p class="text-xs text-[#282626] md:text-xl">корзина</p>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-2 w-[170px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path
+                                d="M10.0001 5.3335C5.95008 5.3335 2.66675 8.61683 2.66675 12.6668C2.66675 20.0002 11.3334 26.6668 16.0001 28.2175C20.6667 26.6668 29.3334 20.0002 29.3334 12.6668C29.3334 8.61683 26.0501 5.3335 22.0001 5.3335C19.5201 5.3335 17.3267 6.56483 16.0001 8.4495C15.3239 7.4863 14.4255 6.70022 13.3811 6.15782C12.3367 5.61542 11.1769 5.33267 10.0001 5.3335Z"
+                                stroke="#706E6E" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p class="text-xs text-[#282626] md:text-xl">избранное</p>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-2 w-[170px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M6.27725 20.5869C7.83827 21.6833 9.69897 22.2727 11.6066 22.2749C12.1944 23.8756 13.2095 25.2847 14.5417 26.3491C15.8739 27.4136 17.4723 28.0927 19.1632 28.3128C20.8542 28.5329 22.5731 28.2855 24.1334 27.5975C25.6937 26.9095 27.0357 25.8072 28.0137 24.4103C28.9916 23.0134 29.5682 21.3753 29.6808 19.6738C29.7934 17.9723 29.4377 16.2724 28.6523 14.7588C27.8669 13.2452 26.6819 11.9757 25.2259 11.0882C23.7698 10.2006 22.0985 9.72886 20.3933 9.72422C19.8882 8.34932 19.0665 7.11261 17.9949 6.1141C16.9232 5.1156 15.6316 4.38333 14.2245 3.97654C12.8174 3.56975 11.3343 3.49984 9.89512 3.77249C8.45598 4.04513 7.10121 4.65266 5.94039 5.54595C4.77957 6.43924 3.84528 7.59319 3.21311 8.91449C2.58094 10.2358 2.26862 11.6873 2.30141 13.1517C2.33421 14.6161 2.7112 16.0522 3.4019 17.3438C4.09259 18.6355 5.0776 19.7465 6.27725 20.5869ZM7.80659 18.4002C8.76434 19.0731 9.88308 19.4807 11.0493 19.5816C10.9289 17.4897 11.5191 15.4185 12.7239 13.7042C13.9231 11.9861 15.6677 10.7235 17.6746 10.1216C17.2421 9.19523 16.6023 8.38079 15.8047 7.74121C15.0072 7.10162 14.0732 6.65403 13.0751 6.43304C12.0769 6.21205 11.0413 6.22358 10.0483 6.46674C9.05533 6.70989 8.13156 7.17817 7.34845 7.83535C6.56534 8.49253 5.94386 9.32101 5.53206 10.2567C5.12026 11.1925 4.92918 12.2103 4.9736 13.2317C5.01801 14.2531 5.29673 15.2505 5.7882 16.147C6.27966 17.0434 6.97071 17.8148 7.80792 18.4016L7.80659 18.4002ZM24.1933 13.5962C23.2353 12.9238 22.1166 12.5167 20.9506 12.4162C21.0709 14.5081 20.4808 16.5793 19.2759 18.2936C18.0767 20.0117 16.3322 21.2742 14.3253 21.8762C14.7578 22.8025 15.3976 23.617 16.1951 24.2566C16.9927 24.8961 17.9266 25.3437 18.9248 25.5647C19.9229 25.7857 20.9585 25.7742 21.9515 25.531C22.9445 25.2879 23.8683 24.8196 24.6514 24.1624C25.4345 23.5052 26.056 22.6768 26.4678 21.741C26.8796 20.8053 27.0707 19.7874 27.0262 18.7661C26.9818 17.7447 26.7031 16.7472 26.2116 15.8508C25.7202 14.9543 25.0291 14.1829 24.1919 13.5962H24.1933Z"
+                                fill="#706E6E" />
+                        </svg>
+                        <p class="text-xs text-[#282626] md:text-xl">сравнение</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
 </body>
