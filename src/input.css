@@ -68,3 +68,8 @@
         color: #0071E4;
     }
 }
+
+.dropdown_btn_style {
+    border-radius: 16px 16px 0px 0px !important;
+    background: #9747FF;
+}

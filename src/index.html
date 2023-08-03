@@ -14,7 +14,7 @@
     <!-- Box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- main css -->
-    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="./dist/output.css">
     <link rel="stylesheet" href="./input.css">
     <!-- Title -->
     <title>Apple Store</title>
@@ -24,43 +24,210 @@
 
     <header class="fixed top-0 w-full bg-white">
         <div class="container mx-auto px-5">
-            <nav class="py-6 flex flex-col gap-[30px]">
+            <nav class="py-6 flex flex-col md:gap-[20px] gap-[15px]">
+                <!-- ------------------- Navbar item start ------------------------ -->
                 <div class="flex justify-between items-center">
-                    <div class="flex items-center gap-8">
+                    <div class="flex items-center gap-8 relative">
                         <img src="./assets/icons/logo.svg" alt="Apple logo" class="flex lg:hidden">
                         <button
-                            class="items-center gap-1 p-4 bg-[#0071E4] rounded-2xl text-white text-xl hover:bg-[#5035F7] focus:bg-[#9747FF] hidden lg:flex">
+                            class="dropdown_btn items-center gap-1 p-3 bg-[#0071E4] rounded-2xl text-white text-xl hover:bg-[#5035F7] hidden lg:flex duration-200">
                             <i class='bx bx-dots-vertical-rounded text-2xl'></i>
                             Каталог товаров
                         </button>
-
                         <div
-                            class="flex items-center p-0 gap-2 md:px-6 md:py-4 border-transparent w-[250px] border md:border-[#B7B7B7] md:w-[595px] rounded-lg">
+                            class="flex items-center p-0 gap-2 md:px-6 md:py-3 border-transparent w-[250px] border md:border-[#B7B7B7] md:w-[595px] rounded-lg">
                             <img src="./assets/icons/akar-icons_search.svg" alt="Search icon">
                             <input type="search" placeholder="Поиск..."
                                 class="focus:outline-none placeholder:text-lg w-full max-w-[600px]">
                         </div>
                     </div>
 
-                    <div class="items-center gap-6 hidden md:flex">
+                    <div
+                        class="dropdown bg-white hidden flex-col rounded-[0px,0px,16px,16px] absolute top-[80px] gap-2 w-[220px] px-4 pt-6 pb-10 duration-300">
+                        <p class="bg-[#F9F9F9] p-2">Смартфоны</p>
+                        <p class="bg-[#F9F9F9] p-2">Планшеты</p>
+                        <p class="bg-[#F9F9F9] p-2">Компьютеры</p>
+                        <p class="bg-[#F9F9F9] p-2">Часы</p>
+                        <p class="bg-[#F9F9F9] p-2">Аксессуары</p>
+                        <p class="bg-[#F9F9F9] p-2">Акции</p>
+                    </div>
+
+                    <div class="items-center gap-6 hidden lg:flex">
                         <img src="./assets/icons/icon-park-outline_like.svg" alt="Like icon"
                             class="cursor-pointer hover:scale-110">
                         <img src="./assets/icons/gg_filters.svg" alt="gg_filters icon"
                             class="cursor-pointer hover:scale-110">
                     </div>
 
-                    <button
-                        class="items-center gap-3 px-4 rounded-2xl bg-[#F6F6F6] text-xl text-[#100E0E] hover:shadow-2xl duration-200 shadow-[#F6F6F6] hidden xl:flex">
+                    <button id="cart_btn"
+                        class="items-center gap-3 py-3 px-4 rounded-2xl bg-[#F6F6F6] text-xl text-[#100E0E] hover:shadow-2xl duration-200 shadow-[#F6F6F6] hidden xl:flex">
                         <img src="./assets/icons/ri_shopping-bag-3-fill.svg" alt="shopping bag">
                         в корзине пусто
                     </button>
 
                     <img src="./assets/icons/ri_shopping-bag-3-fill.svg" alt="shopping bag"
-                        class="hidden lg:flex xl:hidden w-10 h-10 cursor-pointer hover:scale-105">
+                        class="shop_icon hidden lg:flex xl:hidden w-10 h-10 cursor-pointer hover:scale-105">
 
-                    <i class='bx bx-menu text-4xl hover:scale-105 cursor-pointer' style='color:#000000'></i>
+                    <i class='menu_btn bx bx-menu text-4xl hover:scale-105 cursor-pointer xl:hidden'
+                        style='color:#000000'>
+                    </i>
                 </div>
+                <!-- ------------------- Navbar item end ------------------------ -->
 
+                <!-- ------------------ Cart modal start ---------------------- -->
+                <div
+                    class="cart_modal hidden items-center fixed top-0 left-0 w-full h-screen bg-[rgba(255,255,255,0.30)] backdrop-blur-[2px]">
+                    <div class="bg-white w-[720px] pt-10 pb-10 px-10 flex flex-col items-center mx-auto">
+                        <img src="./assets/images/box.png" alt="Box image">
+
+                        <div class="flex flex-col items-center mb-4 mt-6">
+                            <h3 class="text-[#100E0E] text-[32px] font-bold">
+                                В корзине пока ничего нет
+                            </h3>
+
+                            <p class="text-[#585656] text-base font-medium mt-2 mb-4">
+                                Но вы можете легко это исправить
+                            </p>
+
+                            <button
+                                class="go_shop w-[290px] h-[56px] text-white rounded-lg text-base font-medium bg-[#0071E4] hover:bg-[#2A93FD] active:bg-[#0071E4">
+                                начать покупки
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------------ Cart modal end ---------------------- -->
+
+                <!-- ------------------ Dropdown menu start ----------------------- -->
+                <div class="menu_dropdown hidden">
+                    <div class="justify-center overflow-x-auto gap-10 items-center xl:hidden py-5">
+                        <div class="flex items-center justify-between gap-6 mb-5">
+                            <div class="categories flex items-center gap-2 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                                    fill="none">
+                                    <path
+                                        d="M17 6C15.3431 6 14 7.34315 14 9V39C14 40.6569 15.3431 42 17 42H31.0227C32.6796 42 34.0227 40.6569 34.0227 39V9C34.0227 7.34315 32.6796 6 31.0227 6H31C30.4477 6 30 6.44772 30 7C30 8.65685 28.6569 10 27 10H21C19.3431 10 18 8.65685 18 7C18 6.44772 17.5523 6 17 6ZM19.8293 6C19.9398 6.31278 20 6.64936 20 7C20 7.55228 20.4477 8 21 8H27C27.5523 8 28 7.55228 28 7C28 6.64936 28.0602 6.31278 28.1707 6H19.8293ZM12 9C12 6.23858 14.2386 4 17 4H31.0227C33.7841 4 36.0227 6.23858 36.0227 9V39C36.0227 41.7614 33.7841 44 31.0227 44H17C14.2386 44 12 41.7614 12 39V9Z"
+                                        fill="#CCCCCC" />
+                                </svg>
+                                <span>iPhone</span>
+                            </div>
+
+                            <div class="categories flex items-center gap-2 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                                    fill="none">
+                                    <path
+                                        d="M9 38H39C40.6569 38 42 36.6569 42 35V12.9773C42 11.3204 40.6569 9.97728 39 9.97728H9C7.34315 9.97728 6 11.3204 6 12.9773V35C6 36.6569 7.34315 38 9 38ZM9 40C6.23858 40 4 37.7614 4 35V12.9773C4 10.2159 6.23858 7.97728 9 7.97728H39C41.7614 7.97728 44 10.2159 44 12.9773V35C44 37.7614 41.7614 40 39 40H9ZM38 26C36.896 26 36 25.104 36 24C36 22.896 36.896 22 38 22C39.104 22 40 22.896 40 24C40 25.104 39.104 26 38 26ZM10 27C10 27.5523 9.55228 28 9 28C8.44772 28 8 27.5523 8 27V21C8 20.4477 8.44772 20 9 20C9.55228 20 10 20.4477 10 21V27Z"
+                                        fill="#CCCCCC" />
+                                </svg>
+                                <span>iPad</span>
+                            </div>
+
+                            <div class="categories flex items-center gap-2 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                                    fill="none">
+                                    <path
+                                        d="M42.12 34.8047V11.7188C42.12 10.9678 41.5116 10.3594 40.7606 10.3594H7.22156C6.47109 10.3594 5.86219 10.9678 5.86219 11.7188V34.8047H0.492188V36.3281C0.6675 36.532 1.53984 37.162 3.95297 37.1095L43.5155 37.0936C43.5155 37.0936 46.6036 37.1381 47.6719 36.3281V34.8047H42.12ZM23.9911 11.3592C24.098 11.3592 24.1847 11.4459 24.1847 11.5528C24.1847 11.6597 24.0979 11.7459 23.9911 11.7459C23.8842 11.7459 23.798 11.6597 23.798 11.5528C23.798 11.4459 23.8842 11.3592 23.9911 11.3592ZM7.84266 12.4219H40.1395V32.7656H7.84266V12.4219ZM27.4688 35.0977C27.4688 35.3306 27.2798 35.5195 27.0469 35.5195H20.6719C20.4389 35.5195 20.25 35.3306 20.25 35.0977V34.8281H27.4688V35.0977ZM44.8538 35.6133H43.2244C43.1953 35.6133 43.1719 35.5898 43.1719 35.5603C43.1719 35.5312 43.1953 35.5078 43.2244 35.5078H44.8538C44.8828 35.5078 44.9062 35.5312 44.9062 35.5603C44.9062 35.5898 44.8828 35.6133 44.8538 35.6133Z"
+                                        fill="#CCCCCC" />
+                                </svg>
+                                <span>Macbook и iMac</span>
+                            </div>
+
+                            <div class="categories flex items-center gap-2 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                                    fill="none">
+                                    <path
+                                        d="M17 14C15.3431 14 14 15.3431 14 17V31C14 32.6569 15.3431 34 17 34H31.0227C32.6796 34 34.0227 32.6569 34.0227 31V17C34.0227 15.3431 32.6796 14 31.0227 14H17ZM32 35.9045V41C32 43.7614 29.7614 46 27 46H21C18.2386 46 16 43.7614 16 41V35.9C13.7178 35.4367 12 33.419 12 31V17C12 14.581 13.7178 12.5633 16 12.1V7C16 4.23858 18.2386 2 21 2H27C29.7614 2 32 4.23858 32 7V12.0955C34.2935 12.5499 36.0227 14.573 36.0227 17V31C36.0227 33.427 34.2935 35.4501 32 35.9045ZM30 36H18V41C18 42.6569 19.3431 44 21 44H27C28.6569 44 30 42.6569 30 41V36ZM18 12H30V7C30 5.34315 28.6569 4 27 4H21C19.3431 4 18 5.34315 18 7V12Z"
+                                        fill="#CCCCCC" />
+                                </svg>
+                                <span>Watch</span>
+                            </div>
+
+                            <div class="categories flex items-center gap-2 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="52" viewBox="0 0 29 52"
+                                    fill="none">
+                                    <path
+                                        d="M5.83333 14.3333C3.90034 14.3333 2.33333 15.9003 2.33333 17.8333V34.1667C2.33333 36.0997 3.90034 37.6667 5.83333 37.6667H22.1932C24.1262 37.6667 25.6932 36.0997 25.6932 34.1667V17.8333C25.6932 15.9003 24.1262 14.3333 22.1932 14.3333H5.83333ZM23.3333 39.8886V45.8333C23.3333 49.055 20.7217 51.6667 17.5 51.6667H10.5C7.27834 51.6667 4.66667 49.055 4.66667 45.8333V39.8833C2.00405 39.3428 0 36.9888 0 34.1667V17.8333C0 15.0112 2.00405 12.6572 4.66667 12.1167V6.16668C4.66667 2.94502 7.27834 0.333344 10.5 0.333344H17.5C20.7217 0.333344 23.3333 2.94502 23.3333 6.16668V12.1114C26.0091 12.6416 28.0265 15.0019 28.0265 17.8333V34.1667C28.0265 36.9981 26.0091 39.3584 23.3333 39.8886ZM21 40H7V45.8333C7 47.7663 8.567 49.3333 10.5 49.3333H17.5C19.433 49.3333 21 47.7663 21 45.8333V40ZM7 12H21V6.16668C21 4.23368 19.433 2.66668 17.5 2.66668H10.5C8.567 2.66668 7 4.23368 7 6.16668V12Z"
+                                        fill="#CCCCCC" />
+                                </svg>
+                                <span>Гаджеты</span>
+                            </div>
+
+                            <div class="categories flex items-center gap-2 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                                    fill="none">
+                                    <path
+                                        d="M17 6C15.3431 6 14 7.34315 14 9V39C14 40.6569 15.3431 42 17 42H31.0227C32.6796 42 34.0227 40.6569 34.0227 39V9C34.0227 7.34315 32.6796 6 31.0227 6H31C30.4477 6 30 6.44772 30 7C30 8.65685 28.6569 10 27 10H21C19.3431 10 18 8.65685 18 7C18 6.44772 17.5523 6 17 6ZM19.8293 6C19.9398 6.31278 20 6.64936 20 7C20 7.55228 20.4477 8 21 8H27C27.5523 8 28 7.55228 28 7C28 6.64936 28.0602 6.31278 28.1707 6H19.8293ZM12 9C12 6.23858 14.2386 4 17 4H31.0227C33.7841 4 36.0227 6.23858 36.0227 9V39C36.0227 41.7614 33.7841 44 31.0227 44H17C14.2386 44 12 41.7614 12 39V9Z"
+                                        fill="#CCCCCC" />
+                                    <rect x="15.9287" y="7.35714" width="16.1429" height="32.4286" rx="2.5"
+                                        stroke="#CCCCCC" stroke-dasharray="2 2" />
+                                </svg>
+                                <span>Аксессуары</span>
+                            </div>
+
+                            <div class="categories flex items-center gap-2 cursor-pointer">
+                                <i class='bx bx-category text-5xl text-[#CCCCCC]'></i>
+                                <span>Другие</span>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <div class="items-center gap-6 flex xl:hidden">
+                                <img src="./assets/icons/icon-park-outline_like.svg" alt="Like icon"
+                                    class="cursor-pointer hover:scale-110">
+
+                                <img src="./assets/icons/gg_filters.svg" alt="gg_filters icon"
+                                    class="cursor-pointer hover:scale-110">
+
+                                <img src="./assets/icons/ri_shopping-bag-3-fill.svg" alt="shopping bag"
+                                    class="shop_icon w-10 h-10 cursor-pointer hover:scale-105">
+
+                                <div class="callback flex items-center gap-2">
+                                    <i class='bx bxs-phone text-2xl'></i>
+
+                                    <a href="#"
+                                        class="callback_btn -base text-[#0071E4] hover:border-b border-[#0071E4] pb-[2px]">Вам
+                                        перезвонить?
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------------ Dropdown menu end ----------------------- -->
+
+                <!-- ------------------ Callback modal ----------------------- -->
+                <div
+                    class="callback_modal hidden items-center fixed top-0 left-0 w-full h-screen bg-[rgba(255,255,255,0.30)] backdrop-blur-[2px]">
+                    <div class="bg-white w-[550px] py-16 px-10 flex flex-col items-center mx-auto">
+                        <h3 class="text-[#100E0E] text-[32px] font-bold text-center">
+                            Закажите обратный звонок
+                        </h3>
+
+                        <p class="text-[#585656] text-base font-medium mt-2 mb-6">
+                            Менеджер позвонит вам через 3 минуты
+                        </p>
+
+                        <div class="w-[246]">
+                            <form action="" class="w-[246px]">
+                                <input type="tel" class="p_number w-full py-3 px-6 bg-white rounded-lg border mb-4" placeholder="+998"
+                                    required>
+
+                                <button
+                                    class="request_btn w-full h-[56px] text-white rounded-lg text-base font-medium bg-[#0071E4] hover:bg-[#2A93FD] active:bg-[#0071E4">
+                                    заказать звонок
+                                </button>
+                            </form>
+
+                            <button
+                                class="ok_btn hidden w-[245px] h-[56px] text-white rounded-lg text-base font-medium bg-[#0071E4] hover:bg-[#2A93FD] active:bg-[#0071E4">
+                                Хорошо
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------------ Callback modal end ----------------------- -->
+
+                <!-- ------------------ Categories start ----------------------- -->
                 <div class="justify-center gap-10 items-center hidden xl:flex">
                     <div class="flex items-center justify-between gap-6">
                         <div class="categories flex items-center gap-2 cursor-pointer">
@@ -130,31 +297,14 @@
                             <span>Другие</span>
                         </div>
                     </div>
-
-                    <!-- <div class="new_phone flex items-center gap-[11px] pl-[5px] pr-4">
-                        <img src="./assets/images/design_startframe.png" alt="phone design image ">
-
-                        <p class="text-white text-xl">iPhone 14 Pro Max</p>
-
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <g opacity="0.2" clip-path="url(#clip0_2101_1941)">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M2 16C2 19.713 3.475 23.274 6.1005 25.8995C8.72601 28.525 12.287 30 16 30C19.713 30 23.274 28.525 25.8995 25.8995C28.525 23.274 30 19.713 30 16C30 12.287 28.525 8.72601 25.8995 6.1005C23.274 3.475 19.713 2 16 2C12.287 2 8.72601 3.475 6.1005 6.1005C3.475 8.72601 2 12.287 2 16ZM32 16C32 20.2435 30.3143 24.3131 27.3137 27.3137C24.3131 30.3143 20.2435 32 16 32C11.7565 32 7.68687 30.3143 4.68629 27.3137C1.68571 24.3131 0 20.2435 0 16C0 11.7565 1.68571 7.68687 4.68629 4.68629C7.68687 1.68571 11.7565 0 16 0C20.2435 0 24.3131 1.68571 27.3137 4.68629C30.3143 7.68687 32 11.7565 32 16ZM9 15C8.73478 15 8.48043 15.1054 8.29289 15.2929C8.10536 15.4804 8 15.7348 8 16C8 16.2652 8.10536 16.5196 8.29289 16.7071C8.48043 16.8946 8.73478 17 9 17H20.586L16.292 21.292C16.199 21.385 16.1253 21.4954 16.075 21.6168C16.0246 21.7383 15.9987 21.8685 15.9987 22C15.9987 22.1315 16.0246 22.2617 16.075 22.3832C16.1253 22.5046 16.199 22.615 16.292 22.708C16.385 22.801 16.4954 22.8747 16.6168 22.925C16.7383 22.9754 16.8685 23.0013 17 23.0013C17.1315 23.0013 17.2617 22.9754 17.3832 22.925C17.5046 22.8747 17.615 22.801 17.708 22.708L23.708 16.708C23.8011 16.6151 23.875 16.5048 23.9254 16.3833C23.9758 16.2618 24.0018 16.1315 24.0018 16C24.0018 15.8685 23.9758 15.7382 23.9254 15.6167C23.875 15.4952 23.8011 15.3849 23.708 15.292L17.708 9.292C17.615 9.19902 17.5046 9.12527 17.3832 9.07495C17.2617 9.02464 17.1315 8.99874 17 8.99874C16.8685 8.99874 16.7383 9.02464 16.6168 9.07495C16.4954 9.12527 16.385 9.19902 16.292 9.292C16.199 9.38498 16.1253 9.49535 16.075 9.61683C16.0246 9.73831 15.9987 9.86851 15.9987 10C15.9987 10.1315 16.0246 10.2617 16.075 10.3832C16.1253 10.5046 16.199 10.615 16.292 10.708L20.586 15H9Z"
-                                    fill="white" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_2101_1941">
-                                    <rect width="32" height="32" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div> -->
                 </div>
+                <!-- ------------------ Categories end ----------------------- -->
+
             </nav>
         </div>
     </header>
 
-    <main class="mt-[88px] md:mt-[112px] xl:mt-[205px]">
+    <main class="mt-[88px] md:mt-[97px] xl:mt-[205px]">
         <div class="container mx-auto px-5 hidden xl:block">
             <div class="flex justify-between items-center">
                 <a href="./index.html"><img src="./assets/icons/logo.svg" alt="Logo"></a>
@@ -183,8 +333,10 @@
                         <i class='bx bxs-phone text-2xl'></i>
                         <p class="text-xl">+7 812 561 96 62</p>
                     </div>
-                    <a href="#" class="text-base text-[#0071E4] hover:border-b border-[#0071E4] pb-[2px]">Вам
-                        перезвонить?</a>
+                    <a href="#"
+                        class="callback_btn text-base text-[#0071E4] hover:border-b border-[#0071E4] pb-[2px]">Вам
+                        перезвонить?
+                    </a>
                 </div>
             </div>
         </div>
@@ -924,6 +1076,7 @@
         </div>
     </main>
 
+    <script type="module" src="./index.js"></script>
 </body>
 
 </html>
